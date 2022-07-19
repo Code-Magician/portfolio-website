@@ -3,6 +3,7 @@ import './About.scss';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { client, urlFor } from '../../client';
+import { AppWrap } from '../../wrapper';
 
 
 
@@ -45,4 +46,4 @@ const About = () => {
     )
 }
 
-export default About
+export default AppWrap(About, 'about')
