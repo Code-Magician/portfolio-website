@@ -26,21 +26,28 @@ const Header = () => {
                 className="app__header-info"
             >
                 <div className='app__header-badge'>
-                    <div className='badge-cmp app__flex'>
+                    <motion.div className='badge-cmp app__flex'
+                        whileInView={{ scale: [1.2, 1] }}
+                        whileHover={{ scale: [1, 1.2] }}
+                        whileTap={{ opacity: [1, 0.5] }}>
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
                             <p className='p-text'>
-                                Hello, I am
+                                Hi There, my name is
                             </p>
-                            <h1 className='head-text'>Priyansh</h1>
+                            <h1 className='head-text'>Priyansh Singh</h1>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className='tag-cmp app__flex'>
-                        <p className='p-text'>Game Developer</p>
+                    <motion.div className='tag-cmp app__flex '
+                        whileInView={{ scale: [1.2, 1] }}
+                        whileHover={{ scale: [1, 1.2] }}
+                        whileTap={{ opacity: [1, 0.5] }}>
                         <p className='p-text'>Competitive Programmer</p>
+                        <p className='p-text'>Game Developer</p>
                         <p className='p-text'>App Developer</p>
-                    </div>
+                        <p className='p-text'>Web Developer</p>
+                    </motion.div>
                 </div>
             </motion.div>
 
@@ -52,6 +59,7 @@ const Header = () => {
                 <img src={images.profile} alt="profile_bg" />
                 <motion.img
                     whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1.5, 1] }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
                     src={images.circle}
                     alt="profile-circle"
@@ -64,15 +72,21 @@ const Header = () => {
                 whileInView={scaleVariants.whileInView}
                 className="app__header-circles"
             >
-                {[images.flutter, images.redux, images.sass].map(
+                {[images.flutter, images.Unity, images.react].map(
                     (circle, index) => (
-                        <div className='circle-cmp app__flex' key={`circle-${index}`}>
+                        <motion.div
+                            whileInView={{ scale: [1.2, 1] }}
+                            whileHover={{ scale: [1, 1.2] }}
+                            whileTap={{ opacity: [1, 0.5] }}
+                            className='circle-cmp app__flex'
+                            key={`circle-${index}`}
+                        >
                             <img src={circle} alt="circle" />
-                        </div>
+                        </motion.div>
                     )
                 )}
             </motion.div>
-        </div>
+        </div >
     )
 }
 

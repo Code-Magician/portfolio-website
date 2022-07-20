@@ -6,7 +6,7 @@
     align-items: center;
 
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
     // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -55,7 +55,7 @@
         }
 
         a {
-            color: var(--gray-color);
+            color: var(--white-color);
             text-decoration: none;
             flex-direction: column;
 
@@ -90,7 +90,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--black-color);
 
 
     svg {
@@ -108,7 +108,7 @@
 
         padding: 1rem;
 
-        width: 80%;
+        width: 70%;
         height: 100vh;
 
         display: flex;
@@ -117,7 +117,7 @@
         flex-direction: column;
 
         background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
+        background-color: rgba(0, 0, 0, 0.95);
         background-size: cover;
         background-repeat: repeat;
 
@@ -127,7 +127,7 @@
         svg {
             width: 35px;
             height: 35px;
-            color: var(--secondary-color);
+            color: var(--white-color);
             margin: 0.5rem 1rem;
         }
 
@@ -147,11 +147,11 @@
                 margin: 1rem;
 
                 a {
-                    color: var(--gray-color);
+                    color: var(--white-color);
                     text-decoration: none;
                     font-size: 1rem;
                     text-transform: uppercase;
-                    font-weight: 500;
+                    font-weight: 800;
 
                     transition: all 0.3s ease-in-out;
 
