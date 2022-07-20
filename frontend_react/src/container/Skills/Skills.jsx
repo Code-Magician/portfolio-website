@@ -25,7 +25,7 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className="head-text">Skills & Experiences</h2>
+            <h2 className="app__skills-heading head-text">Skills <span>&</span> Experiences</h2>
 
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
@@ -36,12 +36,15 @@ const Skills = () => {
                             className="app__skills-item app__flex"
                             key={skill.name}
                         >
-                            <div
+                            <motion.div
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                whileHover={{ scale: 1.1, opacity: 1.5 }}
+                                whileTap={{ opacity: 0.5 }}
                                 className="app__flex"
                                 style={{ backgroundColor: skill.bgColor }}
                             >
                                 <img src={urlFor(skill.icon)} alt={skill.name} />
-                            </div>
+                            </motion.div>
                             <p className="p-text">{skill.name}</p>
                         </motion.div>
                     ))}

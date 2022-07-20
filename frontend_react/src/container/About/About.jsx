@@ -37,9 +37,9 @@ const About = () => {
     return (
         <>
             <motion.div className='badge-cmp app__flex'
-                whileInView={{ scale: [1.2, 1] }}
-                whileHover={{ scale: [1, 1.2] }}
-                whileTap={{ opacity: [1, 0.5] }}
+                whileInView={{ scale: 1 }}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ opacity: 0.75 }}
             >
                 <h2 className='head-text'>Algorithm: <span>Word used by programmers</span><br /> when they don’t want to <span>explain what they did.</span></h2>
             </motion.div>
@@ -51,7 +51,6 @@ const About = () => {
                             whileInView={{ opacity: 1 }}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ opacity: [1, 0.75] }}
-                            transition={{ duration: 0.5, type: 'tween' }}
                             className="app__profile-item"
                             key={about.title + index}
                         >

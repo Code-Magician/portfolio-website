@@ -1,3 +1,19 @@
+#skills {
+    position: relative;
+    background: url(../../assets/Bg3.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+
+    .app__wrapper {
+        padding: 0;
+
+        .copyright {
+            display: none;
+        }
+    }
+}
+
 .app__skills {
     flex: 1;
     width: 100%;
@@ -36,24 +52,26 @@
 .app__skills-item {
     flex-direction: column;
     text-align: center;
+    width: 75px;
 
     margin: 1rem;
-
     transition: all 0.3s ease-in-out;
 
+
+
     div {
-        width: 90px;
-        height: 90px;
+        width: 75px;
+        height: 75px;
         border-radius: 50%;
         background-color: #fef4f5;
 
         img {
-            width: 50%;
-            height: 50%;
+            width: 75%;
+            height: 75%;
         }
 
         &:hover {
-            box-shadow: 0 0 25px #fef4f5;
+            box-shadow: 0 0 15px var(--highlight-color);
         }
 
         @media screen and (min-width: 2000px) {
@@ -68,7 +86,7 @@
     }
 
     p {
-        font-weight: 500;
+        font-weight: 800;
         margin-top: 0.5rem;
     }
 
@@ -90,20 +108,34 @@
 
     @media screen and (max-width: 900px) {
         margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
     }
 }
 
+.app__skills-heading {
+    margin-top: 5rem;
+}
+
 .app__skills-exp-item {
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 1rem 0;
+
+    padding: 1rem;
+
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .app__skills-exp-works {
     flex: 1;
+
 
     .app__skills-exp-work {
         display: flex;
@@ -114,12 +146,12 @@
         cursor: pointer;
 
         h4 {
-            font-weight: 500;
+            font-weight: 800;
         }
 
         p {
             font-weight: 400;
-            color: var(--gray-color);
+            color: rgba($color: #adadad, $alpha: 1.0);
             margin-top: 5px;
         }
     }
@@ -140,14 +172,16 @@
 
 .skills-tooltip {
     max-width: 300px !important;
-    background-color: var(--white-color) !important;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 5px !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 0 25px rgba(47, 199, 42, 0.2) !important;
+    border-radius: 10px !important;
+    border-color: var(--white-color) !important;
     padding: 1rem !important;
-    color: var(--gray-color) !important;
+    color: var(--white-color) !important;
     text-align: center !important;
     line-height: 1.5 !important;
     opacity: 1 !important;
+
 
     @media screen and (min-width: 2000px) {
         font-size: 1.75rem !important;
