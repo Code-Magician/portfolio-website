@@ -29,7 +29,8 @@ const Header = () => {
                     <motion.div className='badge-cmp app__flex'
                         whileInView={{ scale: [1.2, 1] }}
                         whileHover={{ scale: [1, 1.2] }}
-                        whileTap={{ opacity: [1, 0.5] }}>
+                        whileTap={{ opacity: [1, 0.5] }}
+                    >
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
                             <p className='p-text'>

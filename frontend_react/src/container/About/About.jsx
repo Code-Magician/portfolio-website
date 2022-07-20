@@ -12,32 +12,54 @@ const About = () => {
     const [abouts, setAbouts] = useState([]);
 
     useEffect(() => {
-        const query = '*[_type == "abouts"]';
+        const query = '*[_type == "about"]';
 
         client.fetch(query).then((data) => { setAbouts(data) })
     }, [])
+
+    function dynamicSort(property) {
+        var sortOrder = 1;
+        if (property[0] === "-") {
+            sortOrder = -1;
+            property = property.substr(1);
+        }
+        return function (a, b) {
+            /* next line works with strings and numbers, 
+             * and you may want to customize it to your needs
+             */
+            var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+            return result * sortOrder;
+        }
+    }
 
 
 
     return (
         <>
-            <h2 className='head-text'>I Know that <span>Good App</span><br /> means <span>Good Business.</span></h2>
+            <motion.div className='badge-cmp app__flex'
+                whileInView={{ scale: [1.2, 1] }}
+                whileHover={{ scale: [1, 1.2] }}
+                whileTap={{ opacity: [1, 0.5] }}
+            >
+                <h2 className='head-text'>Algorithm: <span>Word used by programmers</span><br /> when they don’t want to <span>explain what they did.</span></h2>
+            </motion.div>
 
             <div className='app__profiles'>
                 {
-                    abouts.map(
-                        (about, index) => (
-                            <motion.div
-                                whileInView={{ opacity: 1 }}
-                                whileHover={{ scale: 1.1 }}
-                                transition={{ duration: 0.5, type: 'tween' }}
-                                className="app__profile-item"
-                                key={about.title + index}
-                            >
-                                <img src={urlFor(about.imgUrl)} alt={about.title} />
-                                <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
-                                <p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
-                            </motion.div>
+                    abouts.sort(dynamicSort("id")).map(
+                        (about, index) => (<motion.div
+                            whileInView={{ opacity: 1 }}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ opacity: [1, 0.75] }}
+                            transition={{ duration: 0.5, type: 'tween' }}
+                            className="app__profile-item"
+                            key={about.title + index}
+                        >
+                            {console.log(about.title)}
+                            <img src={urlFor(about.imgUrl)} alt={about.title} />
+                            <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
+                            <p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
+                        </motion.div>
                         )
                     )
                 }
