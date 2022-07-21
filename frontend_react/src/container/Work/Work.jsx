@@ -38,10 +38,16 @@ const Work = () => {
 
     return (
         <>
-            <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+            <motion.div className='badge-cmp app__flex'
+                whileInView={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ opacity: 0.75 }}
+            >
+                <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+            </motion.div>
 
             <div className="app__work-filter">
-                {['Unity', 'Web App', 'Mobile App', 'Flutter', 'All'].map((item, index) => (
+                {['Unity', 'Flutter', 'React', 'All'].map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleWorkFilter(item)}
@@ -58,14 +64,19 @@ const Work = () => {
                 className="app__work-portfolio"
             >
                 {filterWork.map((work, index) => (
-                    <div className="app__work-item app__flex" key={index}>
+                    <motion.div
+                        whileInView={{ opacity: 1 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ opacity: 0.75 }}
+                        className="app__work-item app__flex"
+                        key={index}>
                         <div
                             className="app__work-img app__flex"
                         >
                             <img src={urlFor(work.imgUrl)} alt={work.name} />
 
                             <motion.div
-                                whileHover={{ opacity: [0, 1] }}
+                                whileHover={{ opacity: 1 }}
                                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                                 className="app__work-hover app__flex"
                             >
@@ -96,12 +107,12 @@ const Work = () => {
                         <div className="app__work-content app__flex">
                             <h4 className="bold-text">{work.title}</h4>
                             <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
-
+                            {/* 
                             <div className="app__work-tag app__flex">
                                 <p className="p-text">{work.tags[0]}</p>
-                            </div>
+                            </div> */}
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </motion.div>
         </>

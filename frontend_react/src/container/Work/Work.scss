@@ -1,3 +1,19 @@
+#work {
+    position: relative;
+    background: url(../../assets/Bg1.png);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+
+    .app__wrapper {
+        padding: 0;
+
+        .copyright {
+            display: none;
+        }
+    }
+}
+
 .app__works {
     flex: 1;
     width: 100%;
@@ -11,13 +27,21 @@
     align-items: center;
     flex-wrap: wrap;
 
-    margin: 4rem 0 2rem;
+    margin: 4rem 0 2rem 0;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--black-color);
+    background: rgba(0, 0, 0, 0.75);
 
     .app__work-filter-item {
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
-        background-color: #fff;
-        color: #000;
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.75);
+
+        color: var(--black-color);
         font-weight: 800;
 
         cursor: pointer;
@@ -25,7 +49,7 @@
         margin: 0.5rem;
 
         &:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--blue-color);
             color: #fff;
         }
 
@@ -36,7 +60,7 @@
     }
 
     .item-active {
-        background-color: var(--secondary-color);
+        background-color: var(--blue-color);
         color: #fff;
     }
 }
@@ -54,14 +78,17 @@
         margin: 2rem;
         padding: 1rem;
         border-radius: 0.5rem;
-        background-color: #fff;
+
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        background: rgba(0, 0, 0, 0.5);
         color: #000;
 
         cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px var(--highlight-color);
         }
 
         @media screen and (min-width: 2000px) {
@@ -145,12 +172,12 @@
         }
     }
 
-    .app__work-tag {
-        position: absolute;
+    // .app__work-tag {
+    //     position: absolute;
 
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        background-color: #fff;
-        top: -25px;
-    }
+    //     padding: 0.5rem 1rem;
+    //     border-radius: 10px 10px 0 0;
+    //     background-color: rgb(0, 0, 0);
+    //     top: -34px;
+    // }
 }
