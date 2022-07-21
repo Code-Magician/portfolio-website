@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
@@ -37,7 +37,13 @@ const Footer = () => {
 
     return (
         <>
-            <h2 className="head-text">Take a coffee & chat with me</h2>
+            <motion.div className='badge-cmp app__flex'
+                whileInView={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ opacity: 0.75 }}
+            >
+                <h2 className="head-text">Hit me up at the <span>Email or phone.</span><br /> if you'd like to continue ours as of now <span>one-sided conversation.</span></h2>
+            </motion.div>
 
             <div className="app__footer-cards">
                 <div className="app__footer-card ">
@@ -52,15 +58,25 @@ const Footer = () => {
             {!isFormSubmitted ? (
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
-                        <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+                        <input className="p-text"
+                            type="text"
+                            placeholder="Your Name"
+                            name="username"
+                            value={username}
+                            onChange={handleChangeInput} />
                     </div>
                     <div className="app__flex">
-                        <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+                        <input className="p-text"
+                            type="email"
+                            placeholder="Your Email"
+                            name="email"
+                            value={email}
+                            onChange={handleChangeInput} />
                     </div>
-                    <div>
+                    <div className='app__flex'>
                         <textarea
                             className="p-text"
-                            placeholder="Your Message"
+                            placeholder="Your Message..."
                             value={message}
                             name="message"
                             onChange={handleChangeInput}

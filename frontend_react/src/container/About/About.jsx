@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './About.scss';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
 import { client, urlFor } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
 
