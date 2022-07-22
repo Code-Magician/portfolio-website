@@ -26,5 +26,27 @@ export default {
       title: "Issue Date",
       type: "date",
     },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [
+        {
+          name: "tag",
+          title: "Tag",
+          type: "string",
+          options: {
+            list: [
+              "Unity",
+              "Cyber Security",
+              "Programming",
+              "Internship",
+              "Other",
+              "All",
+            ],
+          },
+        },
+      ],
+    },
   ],
 };

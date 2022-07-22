@@ -168,3 +168,48 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
     background: rgba(0, 0, 0, 0.5);
 }
+
+.app__certificates-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 1rem 0 2rem 0;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--black-color);
+    background: rgba(0, 0, 0, 0.75);
+
+    .app__certificates-filter-item {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.75);
+
+        color: var(--black-color);
+        font-weight: 800;
+
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+
+        &:hover {
+            background-color: var(--blue-color);
+            color: #fff;
+        }
+
+        @media screen and (min-width: 2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
+
+    .item-active {
+        background-color: var(--blue-color);
+        color: #fff;
+    }
+}

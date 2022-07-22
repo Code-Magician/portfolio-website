@@ -8,6 +8,8 @@ import './Certificates.scss';
 const Certificates = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [certificates, setCertificates] = useState([]);
+    const [filterWork, setFilterWork] = useState([]);
+    const [activeFilter, setActiveFilter] = useState('All');
 
     const handleClick = (index) => {
         setCurrentIndex(index);
@@ -18,8 +20,22 @@ const Certificates = () => {
 
         client.fetch(query).then((data) => {
             setCertificates(data);
+            setFilterWork(data);
         });
     }, []);
+
+    const handleWorkFilter = (item) => {
+        setActiveFilter(item);
+
+        setTimeout(() => {
+
+            if (item === 'All') {
+                setFilterWork(certificates);
+            } else {
+                setFilterWork(certificates.filter((work) => work.tags.includes(item)));
+            }
+        }, 500);
+    };
 
     return (
         <>
@@ -31,25 +47,37 @@ const Certificates = () => {
                 <h2 className='head-text'>Certificates <span>&</span> Achievements</h2>
             </motion.div>
 
-            {certificates.length && (
+            <div className="app__certificates-filter">
+                {["Unity", "Cyber Security", "Programming", "Internship", "Other", "All"].map((item, index) => (
+                    <div
+                        key={index}
+                        onClick={() => handleWorkFilter(item)}
+                        className={`app__certificates-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+                    >
+                        {item}
+                    </div>
+                ))}
+            </div>
+
+            {filterWork.length && (
                 <>
                     <div className="app__certificates-item app__flex">
                         <div className="app__certificates-content">
-                            <h2 >{certificates[currentIndex].name}</h2>
+                            <h2 >{filterWork[currentIndex].name}</h2>
                             <div>
-                                <h4 className="bold-text">{certificates[currentIndex].by}</h4>
-                                <h5 className="p-text">Issue Date : {certificates[currentIndex].issueDate}</h5>
+                                <h4 className="bold-text">{filterWork[currentIndex].by}</h4>
+                                <h5 className="p-text">Issue Date : {filterWork[currentIndex].issueDate}</h5>
                             </div>
                         </div>
-                        <img src={urlFor(certificates[currentIndex].imgurl)} alt={certificates[currentIndex].name} />
+                        <img src={urlFor(filterWork[currentIndex].imgurl)} alt={filterWork[currentIndex].name} />
                     </div>
 
                     <div className="app__certificates-btns app__flex">
-                        <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? certificates.length - 1 : currentIndex - 1)}>
+                        <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? filterWork.length - 1 : currentIndex - 1)}>
                             <HiChevronLeft />
                         </div>
 
-                        <div className="app__flex" onClick={() => handleClick(currentIndex === certificates.length - 1 ? 0 : currentIndex + 1)}>
+                        <div className="app__flex" onClick={() => handleClick(currentIndex === filterWork.length - 1 ? 0 : currentIndex + 1)}>
                             <HiChevronRight />
                         </div>
                     </div>
