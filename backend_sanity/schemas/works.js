@@ -43,7 +43,7 @@ export default {
           title: "Tag",
           type: "string",
           options: {
-            list: ["Unity", "Flutter", "React", "All"],
+            list: ["Unity", "Flutter", "React", "Other", "All"],
           },
         },
       ],

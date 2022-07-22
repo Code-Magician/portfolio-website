@@ -47,7 +47,7 @@ const Work = () => {
             </motion.div>
 
             <div className="app__work-filter">
-                {['Unity', 'Flutter', 'React', 'All'].map((item, index) => (
+                {['Unity', 'Flutter', 'React', 'Other', 'All'].map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleWorkFilter(item)}

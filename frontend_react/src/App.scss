@@ -100,11 +100,12 @@
 
 .app__social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
     padding: 1rem;
+    margin-top: 5rem;
 
     div {
         width: 40px;
@@ -151,11 +152,12 @@
 
 .app__navigation {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
     padding: 1rem;
+    margin-top: 5rem;
 
     .app__navigation-dot {
         width: 10px;
