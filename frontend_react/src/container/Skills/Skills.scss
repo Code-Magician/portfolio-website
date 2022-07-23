@@ -1,7 +1,7 @@
 #skills {
     position: relative;
-    background: url(../../assets/Bg3.jpg);
-    background-size: cover;
+    background: var(--background-darken), url(../../assets/bg42.jpg);
+    background-size: contain;
     background-repeat: repeat;
     background-position: center;
 

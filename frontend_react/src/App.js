@@ -8,12 +8,13 @@ import {
   Work,
   Certificates,
 } from "./container";
-import { Navbar } from "./components";
+import { Navbar, Background } from "./components";
 import "./App.scss";
 
 const App = () => {
   return (
     <div className="app">
+      {/* <Background /> */}
       <Navbar />
       <Header />
       <About />

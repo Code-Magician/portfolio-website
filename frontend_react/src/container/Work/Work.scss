@@ -1,7 +1,7 @@
 #work {
     position: relative;
-    background: url(../../assets/bg29.jpg);
-    background-size: cover;
+    background: var(--background-darken), url(../../assets/bg34.png);
+    background-size: contain;
     background-repeat: repeat;
     background-position: center;
 
@@ -27,7 +27,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 2rem 2rem 2rem;
     padding: 0.5rem 2rem 0.5rem 2rem;
 
     border-radius: var(--border-radius);

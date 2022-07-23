@@ -1,8 +1,7 @@
 import Particles from "react-tsparticles";
 import ParticlesConfig from "./particles-config";
+import React from "react";
 
-const Background = () => {
+export default function Background() {
   return <Particles params={ParticlesConfig}></Particles>;
-};
-
-export default Background;
+}

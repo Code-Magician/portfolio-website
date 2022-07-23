@@ -1,7 +1,7 @@
 #about {
   position: relative;
-  background: url(../../assets/bg28.jpg);
-  background-size: cover;
+  background: var(--background-darken), url(../../assets/bg37.jpg);
+  background-size: contain;
   background-repeat: repeat;
   background-position: center;
 

@@ -1,7 +1,6 @@
 #home {
     position: sticky;
-    background: url(../../assets/Background.png);
-    // background-color: var(--black-color);
+    background: var(--background-darken), url(../../assets/Background.png);
     background-size: cover;
     background-repeat: repeat;
     background-position: center;

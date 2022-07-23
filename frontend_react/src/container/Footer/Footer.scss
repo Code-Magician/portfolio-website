@@ -1,7 +1,7 @@
 #contact {
     position: relative;
-    background: url(../../assets/Bg.png);
-    background-size: cover;
+    background: var(--background-darken), url(../../assets/bg35.jpg);
+    background-size: contain;
     background-repeat: repeat;
     background-position: center;
 
@@ -51,8 +51,8 @@
 
         cursor: pointer;
 
-        background: url(../../assets/BG21.jpg);
-        background-size: cover;
+        background: url(../../assets/bg39.jpg);
+        background-size: contain;
         background-repeat: repeat;
         background-position: center;
 
@@ -112,8 +112,8 @@
 
 
     box-shadow: var(--box-shadow);
-    background: url(../../assets/bg27.jpg);
-    background-size: cover;
+    background: url(../../assets/bg39.jpg);
+    background-size: contain;
     background-repeat: repeat;
     background-position: center;
 
@@ -184,17 +184,4 @@
         width: 90%;
         margin: 1rem 0;
     }
-}
-
-.badge-cmp {
-    padding: 1rem 2rem;
-    border: var(--white-color);
-    border-radius: 15px;
-    flex-direction: row;
-    width: auto;
-
-    margin: 5rem 3rem 0 3rem;
-
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    background: rgba(0, 0, 0, 0.5);
 }
