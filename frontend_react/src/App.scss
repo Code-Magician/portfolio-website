@@ -179,6 +179,23 @@
     }
 }
 
+.app__header-text {
+    padding: 1rem 2rem;
+
+    flex-direction: row;
+    width: auto;
+
+    margin: 5rem 3rem 0 3rem;
+
+    border-style: var(--border-style);
+    border-radius: var(--border-radius);
+    border-color: var(--white-color);
+    border-width: var(--border-width);
+
+    box-shadow: var(--box-shadow);
+    background: var(--box-background);
+}
+
 @media screen and (max-width: 500px) {
 
     .app__navigation,

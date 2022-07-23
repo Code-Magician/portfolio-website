@@ -1,6 +1,6 @@
 #about {
   position: relative;
-  background: url(../../assets/Bg12.png);
+  background: url(../../assets/bg28.jpg);
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -37,9 +37,13 @@
   flex-direction: column;
   margin: 2rem;
 
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius);
+  border-style: var(--border-style);
+  border-color: var(--white-color);
+  border-width: var(--border-width);
+
+  box-shadow: var(--box-shadow);
+  background: var(--box-background);
 
   h2,
   p {
@@ -55,7 +59,7 @@
   }
 
   &:hover {
-    box-shadow: 0 0 15px var(--highlight-color);
+    box-shadow: var(--box-shadow-h);
   }
 
   @media screen and (min-width: 2000px) {
@@ -66,17 +70,4 @@
       height: 320px;
     }
   }
-}
-
-.badge-cmp {
-  padding: 1rem 2rem;
-  border: var(--white-color);
-  border-radius: 15px;
-  flex-direction: row;
-  width: auto;
-
-  margin: 5rem 3rem 0 3rem;
-
-  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-  background: rgba(0, 0, 0, 0.5);
 }

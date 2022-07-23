@@ -1,7 +1,7 @@
 #home {
-    position: relative;
-    background: url(../../assets/Bg31.jpg);
-
+    position: sticky;
+    background: url(../../assets/Background.png);
+    // background-color: var(--black-color);
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -44,6 +44,7 @@
     align-items: flex-start;
     height: 100%;
 
+
     @media screen and (max-width: 2000px) {
         width: 100%;
         margin-right: 0rem;
@@ -57,20 +58,27 @@
     align-items: flex-start;
     flex-direction: column;
 
-
-
     .badge-cmp,
     .tag-cmp {
         padding: 1rem 2rem;
-        border-radius: 15px;
         flex-direction: row;
         width: auto;
 
         margin-top: 5rem;
 
-        box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-        background: rgba(0, 0, 0, 0.5);
+        border-radius: var(--border-radius);
+        border-style: solid;
+        border-color: var(--white-color);
+        border-width: 2px;
+
+        box-shadow: var(--box-shadow);
+        background: var(--box-background);
+
+        &:hover {
+            box-shadow: var(--box-shadow-h);
+        }
     }
+
 
     .tag-cmp {
         flex-direction: column;
@@ -115,7 +123,7 @@
         border-radius: 50%;
 
         background: var(--white-color);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--box-shadow);
 
         img {
             width: 60%;
@@ -123,7 +131,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 25px var(--highlight-color);
+            box-shadow: var(--box-shadow-h);
         }
     }
 
@@ -133,21 +141,20 @@
     }
 
     div:nth-child(2) {
-        margin: 0 0 0 10rem;
+        margin: 0 0 0 5rem;
         width: 150px;
         height: 150px;
     }
 
     div:nth-child(3) {
-        margin-left: 8rem;
         width: 100px;
         height: 100px;
     }
 
-    div:nth-child(4) {
-        width: 70px;
-        height: 70px;
-    }
+    // div:nth-child(4) {
+    //     width: 70px;
+    //     height: 70px;
+    // }
 
     @media screen and (min-width: 2000px) {
         div:nth-child(1) {
@@ -166,11 +173,11 @@
             height: 200px;
         }
 
-        div:nth-child(4) {
+        // div:nth-child(4) {
 
-            width: 180px;
-            height: 180px;
-        }
+        //     width: 180px;
+        //     height: 180px;
+        // }
     }
 
     @media screen and (max-width: 1200px) {
@@ -179,9 +186,6 @@
         flex-wrap: wrap;
         margin-left: 0;
 
-        div {
-            margin: 3rem;
-        }
     }
 }
 

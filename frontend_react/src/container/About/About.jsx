@@ -35,9 +35,9 @@ const About = () => {
 
     return (
         <>
-            <motion.div className='badge-cmp app__flex'
+            <motion.div className='app__header-text app__flex'
                 whileInView={{ scale: 1 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ opacity: 0.75 }}
             >
                 <h2 className='head-text'>Algorithm: <span>Word used by programmers</span><br /> when they don’t want to <span>explain what they did.</span></h2>
