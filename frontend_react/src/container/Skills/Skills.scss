@@ -57,13 +57,11 @@
     margin: 1rem;
     transition: all 0.3s ease-in-out;
 
-
-
     div {
         width: 75px;
         height: 75px;
         border-radius: 50%;
-        background-color: #fef4f5;
+        // background-color: var(--black-color);
 
         img {
             width: 75%;
@@ -71,7 +69,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 15px var(--highlight-color);
+            box-shadow: var(--box-shadow-h);
         }
 
         @media screen and (min-width: 2000px) {
@@ -113,9 +111,7 @@
     }
 }
 
-.app__skills-heading {
-    margin-top: 5rem;
-}
+
 
 .app__skills-exp-item {
     // width: 100%;
@@ -127,15 +123,16 @@
 
     padding: 1rem;
 
+    border-radius: var(--border-radius);
+    border-style: var(--border-style);
+    border-color: var(--white-color);
+    border-width: var(--border-width);
 
-    border-radius: 15px;
-
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    box-shadow: var(--box-shadow);
 }
 
 .app__skills-exp-works {
     flex: 1;
-
 
     .app__skills-exp-work {
         display: flex;
@@ -143,6 +140,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 1rem;
+
         cursor: pointer;
 
         h4 {
@@ -151,7 +149,7 @@
 
         p {
             font-weight: 400;
-            color: rgba($color: #adadad, $alpha: 1.0);
+            color: var(--lightGray-color);
             margin-top: 5px;
         }
     }
@@ -173,9 +171,14 @@
 .skills-tooltip {
     max-width: 300px !important;
     background-color: rgba(0, 0, 0, 0.9) !important;
-    box-shadow: 0 0 25px rgba(47, 199, 42, 0.2) !important;
-    border-radius: 10px !important;
+
+    box-shadow: var(--box-shadow) !important;
+
+    border-radius: var(--border-radius) !important;
     border-color: var(--white-color) !important;
+    border-width: var(--border-width);
+    border-style: dotted !important;
+
     padding: 1rem !important;
     color: var(--white-color) !important;
     text-align: center !important;

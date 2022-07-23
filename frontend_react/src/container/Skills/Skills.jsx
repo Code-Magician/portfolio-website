@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
-
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
@@ -25,7 +24,14 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className="app__skills-heading head-text">Skills <span>&</span> Experiences</h2>
+            <motion.div className='app__header-text app__flex'
+                whileInView={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ opacity: 0.75 }}
+            >
+                <h2 className="head-text">Skills <span>&</span> Experiences</h2>
+            </motion.div>
+
 
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
@@ -38,8 +44,8 @@ const Skills = () => {
                         >
                             <motion.div
                                 whileInView={{ scale: 1, opacity: 1 }}
-                                whileHover={{ scale: 1.1, opacity: 1.5 }}
-                                whileTap={{ opacity: 0.5 }}
+                                whileHover={{ opacity: 1.5 }}
+                                whileTap={{ opacity: 0.75 }}
                                 className="app__flex"
                                 style={{ backgroundColor: skill.bgColor }}
                             >
