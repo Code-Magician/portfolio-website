@@ -116,8 +116,7 @@
         align-items: flex-end;
         flex-direction: column;
 
-        background: url('../../assets/bgWhite.png');
-        background-color: rgba(0, 0, 0, 0.95);
+        background: var(--background-darken), url(../../assets/bg39.jpg);
         background-size: cover;
         background-repeat: repeat;
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.scss';
 import { images } from '../../constants';
-import { HiMenuAlt4, HiX } from 'react-icons/hi'
+import { HiMenuAlt4, HiMenu, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion';
 
 
@@ -16,17 +16,23 @@ const Navbar = () => {
             </div>
 
             <ul className='app__navbar-links'>
-                {['home', 'about', 'work', 'skills', 'certificates', 'contact'].map((item) => (
+                {['home', 'about', 'work', 'skills', 'certificates', 'contact', 'Resume'].map((item) => (
                     <li key={`link-${item}`} className='app__flex p-text'>
                         <div />
-                        <a href={`#${item}`}>{item}</a>
+                        {
+                            (item !== 'Resume') ?
+                                <a href={`#${item}`}>{item}</a> :
+                                <a href="https://drive.google.com/file/d/1X3N-5IvB7DhwZuaIyRWhVJzmrhvM2jIR/view?usp=sharing"
+                                    target="_blank"
+                                    rel='noreferrer'>{item} ⬇</a>
+                        }
                     </li>
                 )
                 )}
             </ul>
 
             <div className='app__navbar-menu'>
-                <HiMenuAlt4 onClick={() => setToggle(true)} />
+                <HiMenu onClick={() => setToggle(true)} />
                 {
                     toggle && (
                         <motion.div
@@ -34,20 +40,27 @@ const Navbar = () => {
                             transition={{ duration: 0.85, ease: 'easeOut' }}
                         >
                             <HiX onClick={() => setToggle(false)} />
-                            <ul>
-                                {['home', 'about', 'work', 'skills', 'certificates', 'contact'].map((item) => (
 
-                                    <li key={item}>
-                                        <a href={`#${item}`} onClick={() => setToggle(false)}>
-                                            {item}
-                                        </a>
+                            <ul>
+                                {['home', 'about', 'work', 'skills', 'certificates', 'contact', 'Resume'].map((item) => (
+
+                                    <li key={item}>{
+                                        (item !== 'Resume') ?
+                                            < a href={`#${item}`} onClick={() => setToggle(false)}>
+                                                {item}
+                                            </a> : <a href="https://drive.google.com/file/d/1X3N-5IvB7DhwZuaIyRWhVJzmrhvM2jIR/view?usp=sharing"
+                                                target="_blank"
+                                                rel='noreferrer'>{item}</a>
+                                    }
                                     </li>
                                 ))}
                             </ul>
+
                         </motion.div>
                     )
                 }
             </div>
+
         </nav >
     )
 }
