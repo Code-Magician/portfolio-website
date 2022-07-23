@@ -194,6 +194,10 @@
 
     box-shadow: var(--box-shadow);
     background: var(--box-background);
+
+    h2 {
+        text-transform: uppercase;
+    }
 }
 
 @media screen and (max-width: 500px) {

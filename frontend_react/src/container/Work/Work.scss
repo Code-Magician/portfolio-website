@@ -27,7 +27,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    margin: 4rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     padding: 0.5rem 2rem 0.5rem 2rem;
 
     border-radius: var(--border-radius);
@@ -39,6 +39,8 @@
     background: var(--box-background);
 
     .app__work-filter-item {
+        text-transform: uppercase;
+
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
 

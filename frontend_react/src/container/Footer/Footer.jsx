@@ -37,7 +37,7 @@ const Footer = () => {
 
     return (
         <>
-            <motion.div className='badge-cmp app__flex'
+            <motion.div className='app__header-text app__flex'
                 whileInView={{ scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ opacity: 0.75 }}

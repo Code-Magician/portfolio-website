@@ -39,7 +39,7 @@ const Certificates = () => {
 
     return (
         <>
-            <motion.div className='header-text app__flex'
+            <motion.div className='app__header-text app__flex'
                 whileInView={{ scale: 1 }}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ opacity: 0.75 }}

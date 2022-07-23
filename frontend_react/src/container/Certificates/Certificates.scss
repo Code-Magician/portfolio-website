@@ -1,6 +1,6 @@
 #certificates {
     position: relative;
-    background: url(../../assets/bg23.jpg);
+    background: url(../../assets/Bg3.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -24,18 +24,21 @@
     width: 75%;
     height: 75%;
     min-height: 320px;
-    background: rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+    border-radius: var(--border-radius);
+    border-style: var(--border-style);
+    border-color: var(--white-color);
+    border-width: var(--border-width);
+
+    box-shadow: var(--box-shadow);
+    background: var(--box-background);
 
     margin: 2rem 0 0 0;
 
     transition: all 0.3s ease-in-out;
-
-
 
     img {
         width: 100%;
@@ -43,7 +46,7 @@
         border-radius: 15px;
         border: 5px;
         border-style: solid;
-        border-color: var(--gray-color);
+        border-color: var(--secondary-color);
     }
 
     @media screen and (min-width: 2000px) {
@@ -84,10 +87,11 @@
     flex-direction: column;
     // align-items: center;
 
+
     h2 {
         font-size: 2rem;
         line-height: 3rem;
-        color: var(--white-color);
+        color: var(--secondary-color);
         font-family: var(--font-base);
         text-align: center;
 
@@ -100,13 +104,13 @@
 
     h4 {
         font-weight: 600;
-        color: var(--secondary-color);
+        color: var(--white-color);
         margin-top: 1rem;
     }
 
     h5 {
         font-weight: 400;
-        color: var(--white-color);
+        color: var(--lightGray-color);
         margin-top: 5px;
         margin-bottom: 1rem;
     }
@@ -120,12 +124,13 @@
 .app__certificates-btns {
     flex-direction: row;
     margin-top: 1rem;
+    margin-bottom: 5rem;
 
     div {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: var(--black-color);
+        background-color: var(--white-color);
 
         margin: 1rem;
         transition: all 0.3s ease-in-out;
@@ -133,14 +138,14 @@
         svg {
             width: 20px;
             height: 20px;
-            color: var(--white-color);
+            color: var(--black-color);
         }
 
         &:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--blue-color);
 
             svg {
-                color: var(--blue-color);
+                color: var(--white-color);
             }
         }
 
@@ -156,18 +161,6 @@
     }
 }
 
-.header-text {
-    padding: 1rem 2rem;
-    border: var(--white-color);
-    border-radius: 15px;
-    flex-direction: row;
-    width: auto;
-
-    margin: 5rem 3rem 2rem 3rem;
-
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    background: rgba(0, 0, 0, 0.5);
-}
 
 .app__certificates-filter {
     display: flex;
@@ -176,14 +169,19 @@
     align-items: center;
     flex-wrap: wrap;
 
-    margin: 1rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     padding: 0.5rem 2rem 0.5rem 2rem;
 
-    border-radius: 10px;
-    box-shadow: 0 0 20px var(--black-color);
-    background: rgba(0, 0, 0, 0.75);
+    border-radius: var(--border-radius);
+    border-style: var(--border-style);
+    border-color: var(--white-color);
+    border-width: var(--border-width);
+
+    box-shadow: var(--box-shadow);
+    background: var(--box-background);
 
     .app__certificates-filter-item {
+        text-transform: uppercase;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
 
