@@ -22,7 +22,7 @@ const Navbar = () => {
                         {
                             (item !== 'Resume') ?
                                 <a href={`#${item}`}>{item}</a> :
-                                <a href="https://drive.google.com/file/d/1X3N-5IvB7DhwZuaIyRWhVJzmrhvM2jIR/view?usp=sharing"
+                                <a href="https://drive.google.com/file/d/1qT31Ai8NSymHanZm8qM2SDJ00VXBwSqZ/view?usp=sharing"
                                     target="_blank"
                                     rel='noreferrer'>{item} ⬇</a>
                         }
@@ -48,7 +48,7 @@ const Navbar = () => {
                                         (item !== 'Resume') ?
                                             < a href={`#${item}`} onClick={() => setToggle(false)}>
                                                 {item}
-                                            </a> : <a href="https://drive.google.com/file/d/1X3N-5IvB7DhwZuaIyRWhVJzmrhvM2jIR/view?usp=sharing"
+                                            </a> : <a href="https://drive.google.com/file/d/1qT31Ai8NSymHanZm8qM2SDJ00VXBwSqZ/view?usp=sharing"
                                                 target="_blank"
                                                 rel='noreferrer'>{item}</a>
                                     }
